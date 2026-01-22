@@ -63,7 +63,7 @@ class userQueries {
                 include: [
                     {
                         model: InstitucionModel,
-                        attributes: { exclude: ["logo_inst", "nombre_largo"] }
+                        attributes: { exclude: ["logo_inst", "nombre_largo",] }
                     },
                     {
                         model: RolModel,

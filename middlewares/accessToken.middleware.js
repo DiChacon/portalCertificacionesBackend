@@ -18,6 +18,12 @@ export class validateToken {
             // Si el token no se pudo decodificar, devolvemos un error
             if (!decoded) return res.status(403).json({ ok: false, message: 'Token inválido.' });
 
+            req.user = {
+                    id_usuario: decoded.id_usuario,
+                    id_rol: decoded.id_rol,
+                    email: decoded.email // opcional
+                };
+            console.log('Token válido para usuario:', req.user);
             //Si el token es válido, permitimos el acceso al recurso.
             next();
         }catch (error) {

@@ -17,6 +17,9 @@ import { EstadisticasController } from '../controllers/estadisticas.controllers.
 import { estadoController } from '../controllers/estado.controller.js';
 import { bulkExamenController } from '../controllers/bulk_examen.controller.js';
 import { HandleRol } from '../middlewares/handleRol.middleware.js';
+import { documentoController } from '../controllers/documentos.controller.js';
+import { uploadDocumento } from '../middlewares/uploadDocumentos.middleware.js';
+
 
 export class Routes {
     constructor() {
@@ -25,6 +28,14 @@ export class Routes {
     }
 
     initRoutes() {
+        // Rutas para DOCUMENTOS
+        this.router.post('/apicp/create_documento', validateToken.validateJWT, uploadDocumento.single('archivo'),documentoController.create);
+        this.router.get('/apicp/documentos', validateToken.validateJWT, documentoController.getDocumentos);
+        // DOCUMENTOS ADMIN
+        this.router.put('/apicp/documentos/:id', validateToken.validateJWT, documentoController.update);
+        this.router.delete('/apicp/documentos/:id', validateToken.validateJWT, documentoController.delete);
+
+
     
         //Ruta para mantenimiento
         this.router.get('/apicp/mantenimiento', MantenimientoController.mantenimiento);

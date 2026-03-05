@@ -32,6 +32,8 @@ class userQueries {
             });
             if(query){
                 console.log('Se crearon los usuarios satisfactoriamente.');
+                console.log('Usuarios creados:', query);
+                console.log('Usuarios enviados:', users);
                 return { ok: true, data: query};
             } else {
                 return { ok: false, data: null};

@@ -359,7 +359,8 @@ export class UserController {
       const token = tokenMiddleware.createNewPassword(user.id_usuario);
       
       // Actualiza el token del usuario (dentro de la transacción)
-      await UserQueries.updUser(user.id_usuario, { token: token }, { transaction: t });
+     const resultado = await UserQueries.updUser(user.id_usuario, { token: token }, { transaction: t });
+     console.log('Resultado de la actualización del token para el usuario:', resultado);
       
       const link = `${process.env.FRONT_URL}/cambiar-contrasena?token=${token}`;
       

@@ -30,12 +30,17 @@ export const bodyEmailCreateUser = (nombre, correo, link) => {
     <p>📘 ¿Necesitas ayuda para usar la plataforma? Consulta nuestro manual oficial aquí:</p>
 
     <p>
-      <a href="https://drive.google.com/file/d/16d_AYe6lBas8cbnPOBOPQVfhX1AClFsF/view?usp=sharing" style="color: #3498db;">
+      <a href="https://drive.google.com/file/d/1G7ZY9x0Lt-jyrxGdHjpS-B8SSC3-_dbg/view?usp=drive_link" style="color: #3498db;">
         Ver Manual de Usuario
       </a>
     </p>
+    <p>
+      <a href="https://drive.google.com/file/d/1PpBAV2eCDgg9yjySncZlTtzoYq18cbc0/view?usp=drive_link" style="color: #3498db;">
+        Ver Manual de Usuario - Maestro
+      </a>
+    </p>
 
-    <p>📧 Si tienes alguna pregunta o necesitas soporte técnico, no dudes en escribirnos a: <a href="mailto:soporte@stem-certificaciones.com">soporte@stem-certificaciones.com</a></p>
+    <p> Si tienes alguna pregunta o necesitas soporte técnico, no dudes en escribirnos a: <a href="mailto:soporte@stem-certificaciones.com">soporte@stem-certificaciones.com</a></p>
 
     <p>Gracias por formar parte de la comunidad STEM. ¡Mucho éxito en tus exámenes y proyectos!</p>
 

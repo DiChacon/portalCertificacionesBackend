@@ -29,11 +29,11 @@ export class Routes {
 
     initRoutes() {
         // Rutas para DOCUMENTOS
-        this.router.post('/apicp/create_documento', validateToken.validateJWT, uploadDocumento.single('archivo'),documentoController.create);
-        this.router.get('/apicp/documentos', validateToken.validateJWT, documentoController.getDocumentos);
+  //      this.router.post('/apicp/create_documento', validateToken.validateJWT, uploadDocumento.single('archivo'),documentoController.create);
+  //      this.router.get('/apicp/documentos', validateToken.validateJWT, documentoController.getDocumentos);
         // DOCUMENTOS ADMIN
-        this.router.put('/apicp/documentos/:id', validateToken.validateJWT, documentoController.update);
-        this.router.delete('/apicp/documentos/:id', validateToken.validateJWT, documentoController.delete);
+  //      this.router.put('/apicp/documentos/:id', validateToken.validateJWT, documentoController.update);
+  //      this.router.delete('/apicp/documentos/:id', validateToken.validateJWT, documentoController.delete);
 
 
     
